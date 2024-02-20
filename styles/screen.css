@@ -1,50 +1,103 @@
-body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+:root{
+    --main-bg-color:#E9E9E9;
+    --primary-text-color:#424242;
+    --accent-color:#FF3F3C;
+    --bullet-specs: no-repeat center left;
+    --center: center;
+    --zero: 0;
 }
 
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
+body{
+    font-family: "Inter", sans-serif;
+    background: var(--main-bg-color);
+    color: var(--primary-text-color);
+    margin: var(--zero);
+    padding: var(--zero);
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
+header{
     padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
+    margin-bottom: 100px;
 }
 
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+header h1{
+    margin: var(--zero);
+    font-size: 1.5em;
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+main{
+    background: url('/images/Polaroid.png') no-repeat center 200px;
+    margin: 0 auto;
+    width: 1000px;
 }
 
-img.about {
-    opacity: 0.5;
+h3{
+    text-align: var(--center);
+    font-size: 2.75em;
+}
+
+.hero{
+    text-align: var(--center);
+    min-height: 910px;
+}
+
+.hero h2{
+    font-size: 9em;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin: var(--zero);
+}
+
+.details p{
+    width: 650px;
+    text-align: var(--center);
+    margin: auto;
+}
+
+.details ul li{
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0 0 0 30px;
+}
+
+.details ul li.wifi{
+    background: url('/images/wifi.svg') var(--bullet-specs);
+}
+
+.details ul li.cloud{
+    background: url('/images/cloud.svg') var(--bullet-specs);
+}
+
+.details ul li.qr{
+    background: url('/images/qrcode.svg') var(--bullet-specs);
+}
+
+.details ul li.photo{
+    background: url('/images/photo.svg') var(--bullet-specs);
+}
+
+form{
+    background: #E2E2E2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 425px;
+    text-align: var(--center);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+input[type=text]{
+    width: 275px;
+    border: none;
+    padding: 15px;
+}
+
+input[type=button]{
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 15px;
 }
